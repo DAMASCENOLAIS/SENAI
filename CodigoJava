@@ -1,0 +1,23 @@
+JAVASCRIPT
+function media(){
+    var nome = document.getElementById("nome").value;
+    var notaum = document.getElementById("notaum").value;
+    var notadois = document.getElementById("notadois").value;
+    var notatres = document.getElementById("notatres").value;
+    var resultado = (parseFloat(notaum)+parseFloat(notadois)+parseFloat(notatres))/3
+    if(resultado>=7 && resultado < 9){
+        document.getElementById("resultado").innerHTML = nome + ", a sua nota final é: " +
+        resultado.toFixed(1) + ". Você foi aprovado."
+    }
+    if(resultado>=9){
+        document.getElementById("resultado").innerHTML = nome + ", a sua nota final é: " +
+        resultado.toFixed(1) + ". Parabéns, você arrasou!!"
+    }
+    if(resultado<7){
+        document.getElementById("resultado").innerHTML = nome + ", a sua nota final é: " +
+        resultado.toFixed(1) + ". Lamento, você reprovou."
+    }
+
+
+}
+
